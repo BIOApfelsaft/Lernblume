@@ -13,11 +13,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+  import { onMounted } from 'vue';
 
-const { setupDb, isReady } = useDb();
+  const { setupDb, isReady } = useDb();
 
-onMounted(async () => {
-  await setupDb();
-});
+  onMounted(async () => {
+    await setupDb();
+  });
 </script>
