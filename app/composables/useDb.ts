@@ -7,7 +7,7 @@ const dbInstance = ref<Database | null>(null);
 const isDbReady = ref(false);
 
 export const useDb = () => {
-  const setupDb = async () => {
+  const getDb = async () => {
     if (!dbInstance.value) {
       // 1. Init-Script - Creation DB & Seeding
       dbInstance.value = await initDB(); 
@@ -19,6 +19,6 @@ export const useDb = () => {
   return {
     db: dbInstance,
     isReady: isDbReady,
-    setupDb
+    getDb,
   };
 };

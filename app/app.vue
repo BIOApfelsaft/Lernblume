@@ -15,9 +15,9 @@
 <script setup lang="ts">
   import { onMounted } from 'vue';
 
-  const { setupDb, isReady } = useDb();
+  const { getDb, isReady } = useDb();
 
   onMounted(async () => {
-    await setupDb();
+    await getDb();
   });
 </script>

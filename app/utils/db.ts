@@ -12,7 +12,8 @@ export async function initDB() {
       CREATE TABLE IF NOT EXISTS class (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
-        schoolyear TEXT
+        schoolyear TEXT,
+        CONSTRAINT UC_Class UNIQUE (name, schoolyear)
       );
     `);
 

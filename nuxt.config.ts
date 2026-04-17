@@ -3,5 +3,6 @@ export default defineNuxtConfig({
   ssr: false,
   devServer:{ host: '0.0.0.0' },
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  modules: ['@nuxt/ui'],
 })
