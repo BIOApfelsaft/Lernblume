@@ -13,6 +13,7 @@ export async function initDB() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         schoolyear TEXT,
+        is_default BOOLEAN DEFAULT 0,
         CONSTRAINT UC_Class UNIQUE (name, schoolyear)
       );
     `);
